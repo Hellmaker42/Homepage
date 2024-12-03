@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mike Inc.</title>
+</head>
+<body>
+
+ <!--    _____________________________________________________________Nav Bar__________________________________________________ -->
+
+ <nav class="navbar">
+    <div class="menu-container flex-nav">
+        <div class="nav-header">
+            <h2>Mike <span>Fredriksson</span> Inc.</h2>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li class="nav-link"><a href="index.html">Hem</a></li>
+                <li class="nav-link active-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="about.html">Om Oss</a></li>
+                <li class="nav-link"><a href="kontakt.html"><span>Kontakt</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+   
+<!--     _____________________________________________________________End Of Nav Bar____________________________________________ -->
+
+    <div class="port-container">
+        <div class="header">
+            <h1>Här är ett utplock av siter vi skapat</h1>
+        </div>
+        <div class="image" id="site1">
+            <img class="image__img" src="img/webdrum.jpg" alt="Drums">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Web Drumkit</div>
+                <p class="image__description">
+                    Ett trumset gjort utifrån en lektion med Udemy
+                </p>
+            </div>
+        </div>
+        <div class="image" id="site2">
+            <img class="image__img" src="img/bildspel.jpg" alt="Bildspel">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Bildspel</div>
+                <p class="image__description">
+                    Ett bildspel som jag gjorde för att öva
+                </p>
+            </div>
+        </div>
+        <div class="image" id="site3">
+            <img class="image__img" src="img/cv.jpg" alt="Cv">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Cv</div>
+                <p class="image__description">
+                    Ett gammalt cv jag gjorde när jag började lära mig css
+                </p>
+            </div>
+        </div>
+        <div class="image" id="site4">
+            <img class="image__img" src="img/shop.jpg" alt="Shop">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Webshop</div>
+                <p class="image__description">
+                    Gjorde detta som ett antagningprov till en skola
+                </p>
+            </div>
+        </div>
+    </div>
+    <my-footer></my-footer>
+    <script src="script/app-portfolio.js"></script>
+</body>
+</html>

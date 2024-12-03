@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mike Inc.</title>
+</head>
+<body>
+
+ <!--    _____________________________________________________________Nav Bar__________________________________________________ -->
+
+ <nav class="navbar">
+    <div class="menu-container flex-nav">
+        <div class="nav-header">
+            <h2>Mike <span>Fredriksson</span> Inc.</h2>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li class="nav-link"><a href="index.html">Hem</a></li>
+                <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="about.html">Om Oss</a></li>
+                <li class="nav-link active-link"><a href="kontakt.html"><span>Kontakt</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+
+<!--     _____________________________________________________________End Of Nav Bar____________________________________________ -->
+
+    <div class="main-container">
+        <div class="contact-container">
+            <div class="contact-heading">
+                <h1>Kontakta oss här :</h1>
+                <p class="contact-paragraph">( Formulär märkta * är oligatoriska )</p><br>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="get" name="myForm">
+                    <label for="fname">Namn:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="Förnamn"><span class="required-fname">&nbsp;*&nbsp;</span>
+                    <input type="text" id="lname" name="lname" placeholder="Efternamn"><span class="required-lname">&nbsp;*&nbsp;</span><br>
+                    <label for="phone">Telefonnummer:</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Exempel 0707000000"><br>
+                    <label for="phone">E-postadress:</label><br>
+                    <input type="text" id="email" name="email" placeholder="Exempel något@något.se"><span class="required-email">&nbsp;*&nbsp;</span><br>
+                    <input type="checkbox" id="getmail" name="getmail" value="yes"> Jag vill ha nyheter från er till min e-post.<br>
+                    <label for="message">Lämna ett meddelande::</label><br>
+                    <textarea id="message" name="message" rows="7" cols="45"></textarea><br>
+                    <input type="submit" value="Skicka" id="submitButton">
+            </form>
+            </div>
+        </div>    
+    </div>
+    <my-footer></my-footer>
+    <script src="script/app-contact.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="contact-form">
+                <form action="#" method="get">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <label for="name">Namn:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="fname" name="fname" placeholder="Förnamn"><span class="required">*</span>
+                            </td>
+                            <td>
+                                <input type="text" id="lname" name="lname" placeholder="Efternamn"><span class="required">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="phone">Telefonnummer:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="text" id="phone" name="phone" placeholder="Exempel 0707000000">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="phone">E-postadress:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="text" id="email" name="email" placeholder="Exempel något@något.se"><span class="required">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="Skicka">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div> -->

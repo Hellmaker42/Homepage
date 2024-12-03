@@ -1,0 +1,813 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", serif;
+    color: rgb(94, 94, 94);
+}
+
+h2 {
+    margin: 0 20px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #f1eeee; 
+  }
+   
+ 
+  ::-webkit-scrollbar-thumb {
+    background: rgb(138, 138, 138); 
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(87, 87, 87); 
+  }
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px 25px 0 0;
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(71, 31, 31);
+    padding: 0 10px;
+    color:#fff;
+}
+
+footer img {
+    height: 40px;
+    padding: 5px 10px 0 10px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 10%;
+}
+
+/* _______________________________________________________________________________Nav Bar__________________________________________________ */
+
+
+.nav-link {
+    list-style: none;
+    margin: 20px 0;
+    z-index: 2;
+}
+
+.navbar {
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.flex-nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-header span {
+    color:rgb(158, 58, 58);
+    z-index: 2;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Hamburger menyn */
+.nav-toggle {
+    border: transparent;
+    background: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav-links {
+    height: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.nav-open {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    z-index: 2;
+}
+
+ .menu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 40px;
+} 
+
+/* _______________________________________________________________________________End Of Nav Bar___________________________________________ */
+
+/* _______________________________________________________________________________Background_______________________________________________ */
+
+.play {
+    position: fixed;
+    color:rgb(255, 255, 255);
+    width: 20px;
+    top: 20px;
+    left:20px;
+    z-index: 2;
+    cursor: pointer;
+    filter: invert(50%);
+}
+
+.play:hover {
+    filter: invert(100%);
+}
+
+.home-container {
+
+    position: fixed;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    height: 100vh;
+    color:#fff;
+    animation: background 40s ease-in-out infinite;
+    background-size:cover;
+    z-index: 0;
+}
+
+.pause {
+    animation-play-state: paused;
+}
+
+.home-outer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+
+
+@keyframes background {
+    0%, 100% {
+        background-image: url(../img/1bg.jpg);
+
+    }
+    25% {
+        background-image: url(../img/2bg.jpg);
+    }
+    50% {
+        background-image: url(../img/3bg.jpg);
+    }
+    75% {
+        background-image: url(../img/4bg.jpg);
+    }
+}
+
+@-moz-keyframes background {
+    0%, 100% {
+        background-image: url(../img/1bg.jpg);
+
+    }
+    25% {
+        background-image: url(../img/2bg.jpg);
+    }
+    50% {
+        background-image: url(../img/3bg.jpg);
+    }
+    75% {
+        background-image: url(../img/4bg.jpg);
+    }
+}
+
+/* _______________________________________________________________________________End Of Background________________________________________ */
+
+/* _______________________________________________________________________________Hem______________________________________________________ */
+
+
+.text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00000096;
+    padding: 20px;
+    border-radius: 15px 15px 15px 15px;
+    border: 1px solid #000;
+    box-shadow: 8px 8px 10px 15px #000000cc inset;
+    animation: back-box .5s ease-in;
+    /* animation-delay: 1s; */
+    /* opacity: 0; */
+    /* animation-fill-mode: forwards; */
+}
+
+.home-title {
+    display: inline-block;
+    font-size: 2rem;
+    /* opacity: 0; */
+    transform: translateY(0);
+    animation: home 1s;
+    animation-fill-mode: both;
+    margin-bottom: 40px;
+
+}
+
+.home-desc-1 {
+    display: inline-block;
+    width: 100%;
+    /* opacity: 0; */
+    animation: home 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    margin-bottom: 20px;
+}
+
+.home-desc-2 {
+    display: inline-block;
+    width: 100%;
+    /* opacity: 0; */
+    animation: home 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+@keyframes home {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes back-box {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* _______________________________________________________________________________End Of Hem_______________________________________________ */
+
+/* _______________________________________________________________________________Portfolio________________________________________________ */
+
+.port-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 150px 10%;
+    text-align: center;
+}
+
+.image {
+    margin: 20px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgb(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+/* _______________________________________________________________________________End Of Portfolio_________________________________________ */
+
+/* _______________________________________________________________________________About____________________________________________________ */
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 10%;
+    text-align: center;
+}
+
+.header {
+    width: 100vw;
+    margin: 40px 0;
+}
+
+.about-text {
+    width: 100vw;
+    margin: 0 0 20px 0;
+}
+
+.mike {
+    display: flex;
+    flex-direction: column;
+}
+
+.mike:hover .mike-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bot {
+    display: flex;
+    flex-direction: column;
+}
+
+.bot:hover .bot-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mike-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.bot-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.mike-pic {
+    border: 1px solid #000;
+    border-radius: 100%;
+    box-shadow: 10px 10px 20px 10px rgb(117, 117, 117, 0.2);
+    width: 350px;
+    margin: 20px 30px;
+}
+
+.text-right {
+    width: 100vw;
+    text-align: left;
+}
+
+.robot-pic {
+    border: 1px solid #000;
+    border-radius: 100%;
+    box-shadow: 10px 10px 20px 10px rgb(117, 117, 117, 0.6);
+    width: 350px;
+    margin: 20px 30px;
+}
+
+.skills {
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    padding: 5px 5px;
+}
+
+.table-header {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.skill-html {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-html;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.skill-css {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-css;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.skill-jscript {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-jscript;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.skill-csharp {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-charp;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.skill-sql {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-sql;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.skill-azure {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-azure;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+.skill-guitar {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 0%;
+    padding-right: 10px;
+    animation-name: skill-guitar;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.skill-human {
+    text-align: right;
+    background-color: rgb(158, 58, 58);
+    border-radius: 12px;
+    width: 100%;
+    padding-right: 10px;
+    animation-name: skill-human;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+.td-skill {
+    padding-left: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+@keyframes skill-html {
+    from {width: 0%}
+    to {width: 90%}
+  }
+
+  @keyframes skill-css {
+    from {width: 0%}
+    to {width: 60%}
+  }
+
+  @keyframes skill-jscript {
+    from {width: 0%}
+    to {width: 30%}
+  }
+
+  @keyframes skill-charp {
+    from {width: 0%}
+    to {width: 40%}
+  }
+
+  @keyframes skill-sql {
+    from {width: 0%}
+    to {width: 80%}
+  }
+
+  @keyframes skill-azure {
+    from {width: 0%}
+    to {width: 20%}
+  }
+
+  @keyframes skill-guitar {
+    from {width: 0%}
+    to {width: 100%}
+  }
+
+  @keyframes skill-human {
+    from {width: 5%}
+    to {width: 100%}
+  }
+
+/* _______________________________________________________________________________End Of About_____________________________________________ */
+
+/* _______________________________________________________________________________Contact Form_____________________________________________ */
+
+.contact-container {
+    border: 1px solid rgb(201, 201, 201, 0.8);
+    border-radius: 15px;
+    box-shadow: 4px 10px 20px 2px rgb(88, 88, 88, 0.5);
+    width: 92vw;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h1{
+    font-size: 1.56rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-paragraph {
+    font-size: 0.79rem;
+    color:rgb(224, 18, 18);
+    font-style: italic;
+}
+
+.required-email {
+    color:rgb(224, 18, 18);
+    font-size: 1.5rem;
+    padding: 8px 8px;
+}
+
+.required-fname {
+    color:rgb(224, 18, 18);
+    font-size: 1.5rem;
+    padding: 8px 8px;
+}
+
+.required-lname {
+    color:rgb(224, 18, 18);
+    font-size: 1.5rem;
+    padding: 8px 8px;
+}
+
+.contact-container table {
+    padding: 20px 20px;
+}
+
+.contact-container td {
+    padding: 5px 5px 0 5px ;
+    vertical-align: top;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    padding: 0 10px;
+    font-style: italic;
+}
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 0 10px;
+    font-style: italic;
+}
+
+::placeholder {
+    padding: 0 10px;
+    font-style: italic;
+}
+
+.contact-container input[type=submit] {
+    font-size: 1.1rem;
+    color: rgb(104, 104, 104);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px 0 rgb(146, 146, 146, 0.8);
+    cursor: pointer;
+}
+
+.contact-container input[type=submit]:hover {
+    background-color: rgb(158, 58, 58);
+    border: 1px solid rgb(0, 0, 0);
+    color:#fff;
+}
+
+.contact-container input[type=text] {
+    color: rgb(104, 104, 104);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 8px;
+    background-color: #fff;
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px 0 rgb(146, 146, 146, 0.6);
+}
+
+.contact-container input[type=text]:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.validation {
+    padding-left: 10px;
+}
+
+.true {
+    color: rgb(23, 206, 17);
+}
+
+.false {
+    color: rgb(206, 17, 17);
+}
+
+/* _______________________________________________________________________________End OF Contact Form______________________________________ */
+
+@media only screen and (min-width: 680px) {
+
+/* _______________________________________________________________________________Nav Bar Mediaquery________________________________________*/
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-header {
+        display: block;
+    }
+
+    .flex-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .nav-links {
+        height: auto;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        border-bottom: none;
+        padding: 0 10px;
+    }
+
+    .nav-link:hover {
+        background: rgb(158, 58, 58);
+        border-radius: 4px;
+    }
+
+    .active-link {
+        background: rgb(158, 58, 58);
+        border-radius: 4px;
+    }
+
+/* _______________________________________________________________________________End Of Nav Bar Mediaquery_________________________________*/
+
+/* _______________________________________________________________________________Home Mediaquery___________________________________________*/
+/* _______________________________________________________________________________End Of Home Mediaquery____________________________________*/
+
+/* _______________________________________________________________________________Portfolio Mediaquery______________________________________*/
+/* _______________________________________________________________________________End Of Portfolio Mediaquery_______________________________*/
+
+/* _______________________________________________________________________________About Mediaquery__________________________________________*/
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 150px 10%;
+    text-align: center;
+}
+
+.text-right {
+    width: 30vw;
+}
+
+/* _______________________________________________________________________________End Of About Mediaquery___________________________________*/
+
+/* _______________________________________________________________________________Contact Form Mediaquery___________________________________*/
+
+.contact-container {
+    border: 1px solid rgb(201, 201, 201, 0.8);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px 2px rgb(88, 88, 88, 0.5);
+    width: 70%;
+    padding: 20px 30px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h1{
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-paragraph {
+    font-size: 1rem;
+    color:rgb(224, 18, 18);
+    font-style: italic;
+}
+
+/* _______________________________________________________________________________End Of Contact Form Mediaquery____________________________*/
+}
+
